@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import RootLayout from './Layouts/RootLayout';
-import Home, { productsLoader } from './Pages/Home';
+import Home from './Pages/Home';
 import Contact from './Pages/Contact';
 import About from './Pages/About';
 import Cart from './Pages/Cart';
@@ -25,7 +25,7 @@ const App = () => {
   const router = createBrowserRouter(createRoutesFromElements(
     <Route path='/' element={<RootLayout cart={cart} setSearchQuery={setSearchQuery} />}>
       <Route path='/' element={<ProductsLayout />}>
-        <Route index element={<Home searchQuery={searchQuery} />} loader={productsLoader} />
+        <Route index element={<Home searchQuery={searchQuery} />}  />
         <Route path=':id' element={<ProductDetails cart={cart} setCart={setCart} />} loader={ProductDetailsLoader} />
       </Route>
       <Route path='contact' element={<Contact />} />

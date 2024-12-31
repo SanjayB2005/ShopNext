@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "../media_query_css/Home.css";
+import productsData from '../assets/data.json';
 
 const Home = ({ searchQuery }) => {
-  const productsData = useLoaderData();
-
-  const filteredProducts = productsData.filter(product =>
+  const filteredProducts = productsData.Product.filter(product =>
     product.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
@@ -35,8 +34,3 @@ const Home = ({ searchQuery }) => {
 };
 
 export default Home;
-
-export const productsLoader = async () => {
-  const res = await fetch('http://localhost:5000/Product');
-  return res.json();
-};

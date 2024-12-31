@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import "../media_query_css/Home.css";
+import productsData from '../assets/data.json';
 
 const ProductDetails = ({ cart, setCart }) => {
   const Details = useLoaderData();
@@ -9,50 +10,43 @@ const ProductDetails = ({ cart, setCart }) => {
 
   function addToCart() {
     const existingItm = cart.find((item) => item.id === Details.id);
-    if(!existingItm) {
+    if (!existingItm) {
       const cartItem = {
         id: Details.id,
         name: Details.name,
         price: Details.price,
         image: Details.image,
         qty: qty
-        
       };
       setCart([...cart, cartItem]);
       toast.success("Product added to cart");
-    }
-    else {
+    } else {
       toast.error("Product already in cart");
     }
-    
   }
 
   function increaseItem() {
-    if(Details.stock == qty) {
+    if (Details.stock === qty) {
       toast.error("Product out of stock");
-      return ;
+      return;
     }
-    setQty((state)=> state + 1);
+    setQty((state) => state + 1);
   }
 
   function decreaseItem() {
-    if(qty > 1) {
-      setQty((state)=> state - 1);
-    }
-    else {
+    if (qty > 1) {
+      setQty((state) => state - 1);
+    } else {
       toast.error("Quantity cannot be less than 1");
     }
-    
   }
 
-  function  checkStock() {
-    if(Details.stock >  5){
+  function checkStock() {
+    if (Details.stock > 5) {
       return <b className='instock'>In Stock</b>;
-    }
-    else if(Details.stock > 0 && Details.stock <= 5) {
+    } else if (Details.stock > 0 && Details.stock <= 5) {
       return <b className='lowstock'>Low Stock</b>;
-    }
-    else {
+    } else {
       return <b className='outofstock'>Out Of Stock</b>;
     }
   }
@@ -105,9 +99,9 @@ export default ProductDetails;
 
 export const ProductDetailsLoader = async ({ params }) => {
   const { id } = params;
-  const res = await fetch(`http://localhost:5000/Product/${id}`);
-  if (!res.ok) {
+  const product = productsData.Product.find(product => product.id === id);
+  if (!product) {
     throw Error("Could not find the Product Details");
   }
-  return res.json();
+  return product;
 };
