@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "../media_query_css/Home.css";
+import "../media_query_css/home.css";
 import productsData from '../assets/data.json';
 
 const Home = ({ searchQuery }) => {
