@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import "../media_query_css/Home.css";
+import "../media_query_css/home.css";
 import productsData from '../assets/data.json';
 
 const ProductDetails = ({ cart, setCart }) => {
