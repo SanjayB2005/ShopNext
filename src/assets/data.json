@@ -1,0 +1,61 @@
+{
+    "Product" :[
+        
+        {   
+            "id": "1",
+            "name": "OPPO F21s Pro 5G (Dawnlight Gold, 8GB RAM, 128 Storage) with No Cost EMI/Additional Exchange Offers", 
+            "price": 69, 
+            "rating": "⭐⭐⭐⭐⭐",
+            "image": "/public/images/1.jpg",
+            "description":" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis commodi distinctio sequi error. Cum, error fugit suscipit perspiciatis sint eos ex. Quibusdam nisi sit asperiores maiores voluptas voluptates distinctio expedita?",
+            "stock":15
+        
+        },
+    
+        {   
+        
+            "id": "2",
+            "name": "WRISTIO HD, Bluetooth Calling Smart Watch, 15 days battery life, Water Resistant", 
+            "price": 69, 
+            "rating": "⭐⭐⭐⭐⭐",
+            "image": "/public/images/2.jpg",
+            "description":" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis commodi distinctio sequi error. Cum, error fugit suscipit perspiciatis sint eos ex. Quibusdam nisi sit asperiores maiores voluptas voluptates distinctio expedita?",
+            "stock":15
+        },
+            
+        {
+    
+            "id": "3",
+            "name": "Dell Inspiron 3511 Laptop, Intel i3-1115G4, 8GB, 512GB",
+            "price": 69, 
+            "rating": "⭐⭐⭐⭐⭐",
+            "image": "/public/images/3.jpg",
+            "description":" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis commodi distinctio sequi error. Cum, error fugit suscipit perspiciatis sint eos ex. Quibusdam nisi sit asperiores maiores voluptas voluptates distinctio expedita?",
+            "stock":15
+        },
+        
+        {   
+            "id": "4",
+            "name": "PTron Newly Launched Tangent Sports, 60Hrs Playtime", 
+            "price": 69, 
+            "rating": "⭐⭐⭐⭐⭐",
+            "image": "/public/images/4.jpg",
+            "description":" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis commodi distinctio sequi error. Cum, error fugit suscipit perspiciatis sint eos ex. Quibusdam nisi sit asperiores maiores voluptas voluptates distinctio expedita?",
+            "stock":15
+    
+        },
+    
+        {
+            
+            "id": "5",
+            "name": "Campus Men's Maxico Running Shoes",
+            "price": 69,
+            "rating": "⭐⭐⭐⭐⭐",
+            "image": "/public/images/5.jpg",
+            "description":" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis commodi distinctio sequi error. Cum, error fugit suscipit perspiciatis sint eos ex. Quibusdam nisi sit asperiores maiores voluptas voluptates distinctio expedita?",
+            "stock":15
+        }
+        
+        
+    ]
+}
